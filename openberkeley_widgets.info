@@ -1,0 +1,6 @@
+name = Open Berkeley Widgets
+description = Creates FPP widget functionality for Open Berkeley.
+core = 7.x
+package = Open Berkeley
+project = openberkeley_widgets
+dependencies[] = fieldable_panels_panes

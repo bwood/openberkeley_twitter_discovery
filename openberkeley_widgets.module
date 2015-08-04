@@ -1,0 +1,17 @@
+<?php
+
+function openberkeley_widgets_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['openberkeley_js_embed'] = array(
+    'label' => t('Javascript Embed Code'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    //'pane icon' => '/path/to/custom/icon/for/this/pane.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_pane_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/openberkeley-js-embed',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
